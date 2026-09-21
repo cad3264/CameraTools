@@ -70,6 +70,12 @@ camAPI:update()
 Runs the heartbeat function, highly recommended to put this somewhere in your own script's heartbeat loop.
 Make sure automatic is set to false before using this, as it will cause unnecessary lag and issues otherwise!
 
+## Translate
+```lua
+camAPI:translate(cframe,inverse)
+```
+Translates the CFrame to or from the custom camera.
+
 # Examples
 
 #### Simple passthrough
