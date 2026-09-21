@@ -1,6 +1,7 @@
 # CameraTools
 Modify your camera in Vortex!
-Uses a modified version of lowpolycat's CharacterParts script. Huge thanks to them!
+
+**Uses a modified version of lowpolycat's CharacterParts script. Huge thanks to them!**
 
 This simple scripts allows you to set your camera's CFrame *without* modifying Vortex studio. However, this comes at quite a few costs, namely being:
 * Sun shadows must be off, and sun brightness must be 0.
