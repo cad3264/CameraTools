@@ -19,7 +19,7 @@ local camAPI = require(script.Parent:WaitForChild("CameraTool"))()
 
 ### Setup
 ```lua
-camAPI.setup(physics,visuals)
+camAPI:setup(physics,visuals)
 ```
 This will automatically set up the visual and physics counterpart for every child under physics
 Not recommended to set workspace as true.
