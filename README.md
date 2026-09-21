@@ -43,7 +43,7 @@ You can rotate it, move it, and anything else you can do with a regular CFrame.
 ```lua
 camAPI:kill(correctParts)
 ```
-This method allows you to stop the camera API, if correctParts is true or nil, then it will move every visual part to it's physical location.
+This method allows you to stop the camera API, if correctParts is true or nil, then it will remove every visual part and adjust the physical parts back to their original transparency
 
 ## Advanced
 
