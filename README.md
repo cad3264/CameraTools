@@ -12,6 +12,8 @@ This simple scripts allows you to set your camera's CFrame *without* modifying V
 
 # Documentation
 
+Before using this module, it's best to turn off sun lighting and sun shadows. You *can* still use this script with them on, however it may cause weird lighting when the new camera's rotation doesn't match the original camera's rotation.
+
 #### Calling the camera API:
 ```lua
 local camAPI = require(script.Parent:WaitForChild("CameraTool"))()
