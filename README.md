@@ -89,32 +89,43 @@ Translates the CFrame to or from the custom camera.
 local camAPI = require(script.Parent:WaitForChild("CameraTool"))()
 local runService = game:GetService("RunService")
 local players = game:GetService("Players")
+local workspace = game:GetService("Workspace")
 
 local player = players.LocalPlayer
+
+local physics = workspace:WaitForChild("Map") -- Make sure to set this to whatever model your using!
+
+camAPI:setup(physics)
 
 camAPI.active = true
 
 runService.Heartbeat:Connect(function()
-    local trueCam = workspace.CurrentCamera
-    camAPI.CFrame = trueCam.CFrame -- put whatever you want here, the sky's the limit
+    local trueCam = workspace.CurrentCamera.CFrame
+    
+    camAPI.CFrame = trueCam  -- Put whatever you want here, the sky's the limit
 end)
 ```
 
-#### Passthrough with manual updating
+#### Passthrough, with manual updating
 ```lua
 local camAPI = require(script.Parent:WaitForChild("CameraTool"))()
 local runService = game:GetService("RunService")
 local players = game:GetService("Players")
+local workspace = game:GetService("Workspace")
 
 local player = players.LocalPlayer
 
-camAPI.automatic = false -- ensure this is false, otherwise :update() may cause issues and lag
+local physics = workspace:WaitForChild("Map")
+
+camAPI:setup(physics)
+
+camAPI.automatic = false
 camAPI.active = true
 
 runService.Heartbeat:Connect(function()
-    local trueCam = workspace.CurrentCamera
+    local trueCam = workspace.CurrentCamera.CFrame
     
-    camAPI.CFrame = trueCam.CFrame -- put whatever you want here
-    camAPI:update() -- make sure to run this after setting the CFrame for best results
+    camAPI.CFrame = trueCam
+    camAPI:update()
 end)
 ```
