@@ -17,6 +17,15 @@ This simple scripts allows you to set your camera's CFrame *without* modifying V
 local camAPI = require(script.Parent:WaitForChild("CameraTool"))()
 ```
 
+### Setup
+```lua
+camAPI.setup(true,false)
+```
+This will automatically set up the visual and physics counterpart for every child under "True"
+Not recommended to set workspace as true.
+This will also automatically set the camAPI.physics and camAPI.visuals instances
+If false is not given, it will create a new model labeled "False" under Workspace.
+
 #### Active : bool
 ```lua
 camAPI.active
@@ -37,6 +46,16 @@ camAPI:kill(correctParts)
 This method allows you to stop the camera API, if correctParts is true or nil, then it will move every visual part to it's physical location.
 
 ## Advanced
+
+#### Physics & Visuals : Instance
+```lua
+camAPI.physics
+```
+```lua
+camAPI.visuals
+```
+Every part under visuals will mirror any parts under physics that match it's unique ID, or if no parts are found, then any parts that match it's name.
+Physics should be 1 transparency, while Visuals should be 0 transparency and cantcollide.
 
 #### Automatic : bool
 ```lua
