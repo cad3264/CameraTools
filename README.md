@@ -22,8 +22,11 @@ local camAPI = require(script.Parent:WaitForChild("CameraTool"))()
 camAPI:setup(physics,visuals)
 ```
 This will automatically set up the visual and physics counterpart for every child under physics
+
 Not recommended to set workspace as true.
+
 This will also automatically set the camAPI.physics and camAPI.visuals instances
+
 If Visuals is not given, it will create a new model labeled "Visuals" under Workspace.
 
 #### Active : bool
@@ -37,6 +40,7 @@ This changes if the camera is being modified. Recommended if your doing automati
 camAPI.CFrame
 ```
 Being the star of the show, this value allows you to set your camera's CFrame to any CFrame!
+
 You can rotate it, move it, and anything else you can do with a regular CFrame.
 
 #### Kill
@@ -55,6 +59,7 @@ camAPI.physics
 camAPI.visuals
 ```
 Every part under visuals will mirror any parts under physics that match it's unique ID, or if no parts are found, then any parts that match it's name.
+
 Physics should be 1 transparency, while Visuals should be 0 transparency and cantcollide.
 
 #### Automatic : bool
@@ -68,6 +73,7 @@ This value dictates if the built-in heartbeat will run or not.
 camAPI:update()
 ```
 Runs the heartbeat function, highly recommended to put this somewhere in your own script's heartbeat loop.
+
 Make sure automatic is set to false before using this, as it will cause unnecessary lag and issues otherwise!
 
 ## Translate
