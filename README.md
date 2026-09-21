@@ -19,12 +19,12 @@ local camAPI = require(script.Parent:WaitForChild("CameraTool"))()
 
 ### Setup
 ```lua
-camAPI.setup(true,false)
+camAPI.setup(physics,visuals)
 ```
-This will automatically set up the visual and physics counterpart for every child under "True"
+This will automatically set up the visual and physics counterpart for every child under physics
 Not recommended to set workspace as true.
 This will also automatically set the camAPI.physics and camAPI.visuals instances
-If false is not given, it will create a new model labeled "False" under Workspace.
+If Visuals is not given, it will create a new model labeled "Visuals" under Workspace.
 
 #### Active : bool
 ```lua
