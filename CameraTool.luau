@@ -134,18 +134,19 @@ return function()
         return physics, visuals
     end
     
-    function cameraAPI:translate(CFrame,inverse)
+    function cameraAPI:translate(cframe,inverse)
         local camera = workspace.CurrentCamera
         local camCFrame = camera.CFrame
         if cameraAPI.active then 
             camCFrame = cameraAPI.CFrame
         end
         if not inverse then
-            translate(CFrame,camera.CFrame,camCFrame)
+            return translate(cframe,camera.CFrame,camCFrame)
         else
-            translate(CFrame,camCFrame,camera.CFrame)
+            return translate(cframe,camCFrame,camera.CFrame)
         end
     end
+
     
     local function heartbeatFunc()
         if cameraAPI.physics and cameraAPI.visuals then 
