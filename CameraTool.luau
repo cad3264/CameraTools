@@ -106,7 +106,6 @@ return function()
         return ((old.Rotation * (new.Rotation:Inverse() * (CFrame - new.Position))) + old.Position)
     end
 
-    local horizRotation = 0
     cameraAPI.CFrame = CFrame.new(0,0,0)
     cameraAPI.active = false
     
